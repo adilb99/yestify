@@ -1,0 +1,12 @@
+*{
+	font-family: sans-serif;
+}
+
+#menubar{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	background-color: #cff4ff;
+	display: flex;
+	flex-direction: horizontal;
+}
