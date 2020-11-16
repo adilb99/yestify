@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>YEStify</title>
-
+  <script src="https://kit.fontawesome.com/37397bbd57.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/index.css" >
 
 </head>
@@ -23,9 +23,47 @@
   	<div id = "menubar-mode-selector">Current mode</div>
   	<div id = "menubar-logo">YEStify</div>
   </div>
+
+
   <div id = "main">
     <div id="contacts"> 
-        
+
+      <span style="padding-bottom: 20px; margin-left: 30px; font-size: 1.5em"> 
+        Your contacts </span>
+
+        <table id="contacts_table">
+          <tr>
+            <td><img class="avatar_img" src="./src/avatar_friend.png"></td>
+            <td> 
+              <span class="contact_name"> John Johnsky </span>
+              <span class="message_preview"> Hey, how's it... </span>
+
+            </td>
+          
+          </tr>
+
+          <tr>
+            <td><img class="avatar_img" src="./src/avatar_colleague.png"></td>
+            <td> 
+              <span class="contact_name"> Boss Bossow  </span>
+              <span class="message_preview"> Don't forget to... </span>
+            </td>
+          
+          </tr>
+
+          <tr>
+            <td><img class="avatar_img" src="./src/avatar_random.png"></td>
+            <td> 
+              <span class="contact_name"> Anton Chigurh </span> 
+              <span class="message_preview"> Call it </span>
+
+            </td>
+          </tr>
+
+        </table>
+
+        <i class="fas fa-plus" id="add_chat_icon"></i>
+
     </div>
 
     <div id="chat">
