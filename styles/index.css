@@ -111,6 +111,14 @@
 	color: #acacac
 }
 
+.chat_placeholder_class {
+	display: block;
+	margin-top: 35vh;
+	margin-left: 65vh;
+	font-size: 2em;
+	color: #acacac
+}
+
 #main {
 	padding-top: 80px;
 	position: relative;
@@ -157,6 +165,13 @@
 
 .chat_online_status {
 	color: #6dff74;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.8em;
+}
+
+.chat_offline_status {
+	color: #acacac;
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 0.8em;
@@ -238,11 +253,6 @@
 	border-bottom: 15px solid transparent;
 	left: -16px;
 	top: 0px;
-  }
-  
-
-  .channel_inside {
-
   }
 
   .chat_message_field_div {
