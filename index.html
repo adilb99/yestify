@@ -28,7 +28,7 @@
   <div id = "main">
     <div id="contacts"> 
 
-      <span style="padding-bottom: 20px; margin-left: 30px; font-size: 1.5em"> 
+      <span style="padding-bottom: 20px; margin-left: 40px; font-size: 1.5em"> 
         Your contacts </span>
 
         <table id="contacts_table">
@@ -67,7 +67,60 @@
     </div>
 
     <div id="chat">
-        
+        <span id="chat_placeholder" style="display: none;"> No chat here yet... </span>
+
+        <div id="john_chat">
+
+          <img class="chat_avatar" src="./src/avatar_friend.png">
+          <span class="chat_name"> John Johnsky </span>
+          <span class="chat_online_status"> Online </span>
+
+          <div class="channel_selector_div">
+            <span class="channel_selector selected"> Personal </span>
+            <span class="channel_selector"> Work </span>
+            <span class="channel_selector"> Gaming </span>
+          </div>
+          
+          <div class="channel_inside" id="john_personal_channel">
+            
+            
+            <div class="msg-box left"> 
+              I had a great time paintballing yesterday. Let's do that again some time 
+            </div> <span class="time_marker" style="float: left;"> 10:00 PM </span>
+
+            <div class="msg-box right">  Yep, until next time  </div>
+            <span class="time_marker" style="float: right;"> 10:01 PM </span>
+
+            <div class="msg-box left"> Hey, how's it going?  </div>
+            <span class="time_marker" style="float: left;"> 8:08 AM </span>
+
+          </div>
+          
+          <div class="channel_inside" id="john_work_channel">
+
+          </div>
+
+          <div class="channel_inside" id="john_gaming_channel">
+
+          </div>
+
+          <div class="chat_message_field_div"> 
+            <img class="clip-icon" src="./src/clip_icon.png">
+            <input class="message_input" type="text" placeholder="Your message here...">
+            <i class="far fa-smile"></i>
+            <i class="fas fa-paper-plane"></i>
+          </div>
+
+        </div>
+
+        <div id="boss_chat" style="display: none;">
+
+        </div>
+
+        <div id="anton_chat" style="display: none;">
+
+        </div>
+
     </div>
   </div>
 
