@@ -213,6 +213,111 @@ social_anton.addEventListener('click', function(){
     }
 });
 
+// -----------------------
+const social_copy_bulk_personal = document.getElementById('social_copy_bulk_personal');
+const social_copy_bulk_work = document.getElementById('social_copy_bulk_work');
+const social_copy_bulk_gaming = document.getElementById('social_copy_bulk_gaming');
+
+const social_copy_john = document.getElementById('social_copy_john');
+const social_copy_boss = document.getElementById('social_copy_boss');
+const social_copy_anton = document.getElementById('social_copy_anton');
+
+social_copy_bulk_personal.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_1').checked == true &&
+    document.getElementById('check_social_copy_4').checked == true &&
+    document.getElementById('check_social_copy_7').checked == true){
+
+        document.getElementById('check_social_copy_1').checked = false;
+        document.getElementById('check_social_copy_4').checked = false;
+        document.getElementById('check_social_copy_7').checked = false;
+    } else {
+        document.getElementById('check_social_copy_1').checked = true;
+        document.getElementById('check_social_copy_4').checked = true;
+        document.getElementById('check_social_copy_7').checked = true;    
+    }
+    
+});
+
+social_copy_bulk_work.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_2').checked == true &&
+    document.getElementById('check_social_copy_5').checked == true &&
+    document.getElementById('check_social_copy_8').checked == true){
+
+        document.getElementById('check_social_copy_2').checked = false;
+        document.getElementById('check_social_copy_5').checked = false;
+        document.getElementById('check_social_copy_8').checked = false;
+    } else {
+        document.getElementById('check_social_copy_2').checked = true;
+        document.getElementById('check_social_copy_5').checked = true;
+        document.getElementById('check_social_copy_8').checked = true;    
+    }
+    
+});
+
+social_copy_bulk_gaming.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_3').checked == true &&
+    document.getElementById('check_social_copy_6').checked == true &&
+    document.getElementById('check_social_copy_9').checked == true){
+
+        document.getElementById('check_social_copy_3').checked = false;
+        document.getElementById('check_social_copy_6').checked = false;
+        document.getElementById('check_social_copy_9').checked = false;
+    } else {
+        document.getElementById('check_social_copy_3').checked = true;
+        document.getElementById('check_social_copy_6').checked = true;
+        document.getElementById('check_social_copy_9').checked = true;    
+    }
+    
+});
+
+social_copy_john.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_1').checked == true &&
+    document.getElementById('check_social_copy_2').checked == true &&
+    document.getElementById('check_social_copy_3').checked == true){
+
+        document.getElementById('check_social_copy_1').checked = false;
+        document.getElementById('check_social_copy_2').checked = false;
+        document.getElementById('check_social_copy_3').checked = false;
+    } else {
+        document.getElementById('check_social_copy_1').checked = true;
+        document.getElementById('check_social_copy_2').checked = true;
+        document.getElementById('check_social_copy_3').checked = true;    
+    }
+});
+
+social_copy_boss.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_4').checked == true &&
+    document.getElementById('check_social_copy_5').checked == true &&
+    document.getElementById('check_social_copy_6').checked == true){
+
+        document.getElementById('check_social_copy_4').checked = false;
+        document.getElementById('check_social_copy_5').checked = false;
+        document.getElementById('check_social_copy_6').checked = false;
+    } else {
+        document.getElementById('check_social_copy_4').checked = true;
+        document.getElementById('check_social_copy_5').checked = true;
+        document.getElementById('check_social_copy_6').checked = true;    
+    }
+});
+
+social_copy_anton.addEventListener('click', function(){
+    if(document.getElementById('check_social_copy_7').checked == true &&
+    document.getElementById('check_social_copy_8').checked == true &&
+    document.getElementById('check_social_copy_9').checked == true){
+
+        document.getElementById('check_social_copy_7').checked = false;
+        document.getElementById('check_social_copy_8').checked = false;
+        document.getElementById('check_social_copy_9').checked = false;
+    } else {
+        document.getElementById('check_social_copy_7').checked = true;
+        document.getElementById('check_social_copy_8').checked = true;
+        document.getElementById('check_social_copy_9').checked = true;    
+    }
+});
+
+
+
+// -----------------------
 
 
 

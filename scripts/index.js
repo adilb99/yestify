@@ -245,3 +245,18 @@ change_modes_select.addEventListener('change', function(){
     }
 
 });
+
+
+menubar_mode_selector.addEventListener('change', function(){
+    if(menubar_mode_selector.value == "work"){
+        modal.style.display = "none";
+        after_popup.style.display = "block";
+
+        document.getElementById('menubar').style.backgroundColor = "#e5e5e5";
+
+        setTimeout(function(){
+            after_popup.className = 'hide';
+            setTimeout(function(){after_popup.style.display = "none";}, 400);
+        }, 3000)
+    }
+});
