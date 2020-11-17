@@ -70,8 +70,8 @@
 
 #modes_table {
 	margin-top: 10px;
-	margin-left: 12px;
-	width: 215px;
+	margin-left: 10px;
+	width: 225px;
 	border-collapse: collapse;
 }
 
@@ -93,7 +93,7 @@
 #modes {
 	padding-top: 10px;
 	border: 1px solid #e5e5e5;
-	width: 240px;
+	width: 245px;
 	height: 80vh;
 	box-shadow: 3px 4px 3px #cacaca;
 	float: left;
@@ -154,6 +154,11 @@
 	margin-left: 10px;
 	display: inline-block;
 	vertical-align: middle;
+	border: 0px;
+}
+
+.mode_big_name:focus {
+	outline: none;
 }
 
 
@@ -162,6 +167,11 @@
 	height: 65px;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.mode_avatar:hover {
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 #add_mode_icon {
@@ -180,13 +190,14 @@
 }
 
 .customization_table {
-	border: 1px solid black;
+	/* border: 1px solid #e5e5e5; */
+	border-collapse: collapse;
 	margin-top: 40px;
 	font-size: 1.2em;
 }
 
 .customization_table td {
-	border: 1px solid black;
+	border: 1px solid #888888;
 	text-align: center;
 }
 
@@ -199,9 +210,30 @@
 	text-align: center;
 }
 
+.contact_cell:hover {
+	background-color: #f0f0f0;
+	cursor: pointer;
+}
+
+.all_personal:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+.all_work:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+.all_gaming:hover {
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
 .mode_checkbox {
 	height: 50px;
 	width: 50px;
+	cursor: pointer;
 }
 
 .checkbox_cell {
@@ -220,4 +252,53 @@
 	padding: 50px 0px 0px 50px;
 	display: inline-block;
 	vertical-align: top;
+}
+
+.short_description {
+	font-size: 1.2em;
+	padding: 5px 0px 5px 5px;
+	height: 30px;
+	width: 300px;
+}
+
+.save_button {
+	background-color: #7ee1ff;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.save_button:hover {
+	background-color: #97e3fa;
+}
+
+.save_exit_button {
+	margin-left: 20px;
+	background-color: #7ee1ff;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.save_exit_button:hover {
+	background-color: #97e3fa;
+}
+
+.fa-trash-alt {
+	color: rgb(185, 0, 0);
+}
+
+.fa-trash-alt:hover {
+	cursor: pointer;
+	color: rgb(226, 63, 63)
 }

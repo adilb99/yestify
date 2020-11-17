@@ -38,7 +38,7 @@
         Your modes </span>
 
         <table id="modes_table">
-          <tr id="social_mode">
+          <tr id="social_mode" style="background-color: #e5e5e5;">
             <td><img class="mode_img" src="./src/social_mode.png"></td>
             <td> 
               <span class="mode_name"> Social mode </span>
@@ -48,7 +48,9 @@
             <td>
               <i class="fas fa-copy"></i>
             </td>
-          
+            <td style="padding-right: 5px;">
+              <i class="fas fa-trash-alt"></i>
+            </td>
           </tr>
 
           <tr id="work_mode">
@@ -59,6 +61,9 @@
             </td>
             <td>
               <i class="fas fa-copy"></i>
+            </td>
+            <td style="padding-right: 5px;">
+              <i class="fas fa-trash-alt"></i>
             </td>
 
           </tr>
@@ -73,6 +78,24 @@
             <td>
               <i class="fas fa-copy"></i>
             </td>
+            <td style="padding-right: 5px;">
+              <i class="fas fa-trash-alt"></i>
+            </td>
+          </tr>
+
+          <tr id="new_mode" style="display: none;">
+            <td><img class="mode_img" src="./src/new_mode.png"></td>
+            <td> 
+              <span class="mode_name"> New Mode </span> 
+              <span class="mode_preview">  </span>
+
+            </td>
+            <td>
+              <i class="fas fa-copy"></i>
+            </td>
+            <td style="padding-right: 5px;">
+              <i class="fas fa-trash-alt"></i>
+            </td>
           </tr>
 
 
@@ -83,52 +106,52 @@
     </div>
 
     <div id="details">
-      <div id="social_mode">
-
+      <div id="social_mode_details">
+        <button type="button" hidden></button>
         <img class="mode_avatar" src="./src/social_mode.png">
-        <span class="mode_big_name"> Social Mode </span>
+        <input class="mode_big_name" value="Social Mode">
         <br>
         <div class="details_left">
         <table class="customization_table">
           
           <tr style="background-color: #e5e5e5;">
             <td style="width: 40px"> Contacts </td>
-            <td class="all_personal"> Personal channel </td>
-            <td class="all_work"> Work <br> channel </td>
-            <td class="all_gaming"> Gaming channel </td>
+            <td class="all_personal" id="social_bulk_personal"> Personal channel </td>
+            <td class="all_work" id="social_bulk_work"> Work <br> channel </td>
+            <td class="all_gaming" id="social_bulk_gaming"> Gaming channel </td>
           </tr>
 
           <tr>
-            <td class="contact_cell">
+            <td class="contact_cell" id="social_john">
               <img class="contact_avatar" src="./src/avatar_friend.png">
               <br> 
               <span class="contact_name"> John </span>
             </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_1" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_2" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_3" type="checkbox" class="mode_checkbox" checked> </td>
           </tr>
 
           <tr>
-            <td class="contact_cell">
+            <td class="contact_cell" id="social_boss">
               <img class="contact_avatar" src="./src/avatar_colleague.png">
               <br> 
               <span class="contact_name"> Boss </span>
             </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_4" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_5" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_6" type="checkbox" class="mode_checkbox"> </td>
           </tr>
 
           <tr>
-            <td class="contact_cell">
+            <td class="contact_cell" id="social_anton">
               <img class="contact_avatar" src="./src/avatar_random.png">
               <br> 
               <span class="contact_name"> Anton </span>
             </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
-            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_7" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_8" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_9" type="checkbox" class="mode_checkbox"> </td>
           </tr>
 
 
@@ -136,15 +159,209 @@
         </div>
 
         <div class="details_right">
-          <span> Short Description </span>
+          <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
           <br>
-          <input type="text" id="social_description"> 
+          <input type="text" class="short_description" value="Ignores work"> 
           <br>
-          <button> Save </button>
-          <button> Save & Exit </button>
+          <br>
+          <button class="save_button"> Save </button>
+          <button class="save_exit_button"> Save & Exit </button>
         </div>
         
       </div>
+
+      <div id="work_mode_details" style="display: none;">
+        <button type="button" hidden></button>
+        <img class="mode_avatar" src="./src/work_mode.png">
+        <input class="mode_big_name" value="Work Mode">
+        <br>
+        <div class="details_left">
+        <table class="customization_table">
+          
+          <tr style="background-color: #e5e5e5;">
+            <td style="width: 40px"> Contacts </td>
+            <td class="all_personal" id="work_bulk_personal"> Personal channel </td>
+            <td class="all_work" id="work_bulk_work"> Work <br> channel </td>
+            <td class="all_gaming" id="work_bulk_gaming"> Gaming channel </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="work_john">
+              <img class="contact_avatar" src="./src/avatar_friend.png">
+              <br> 
+              <span class="contact_name"> John </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_work_1" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_work_2" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_work_3" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="work_boss">
+              <img class="contact_avatar" src="./src/avatar_colleague.png">
+              <br> 
+              <span class="contact_name"> Boss </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_work_4" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_work_5" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_work_6" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="work_anton">
+              <img class="contact_avatar" src="./src/avatar_random.png">
+              <br> 
+              <span class="contact_name"> Anton </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_work_7" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_work_8" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_work_9" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+
+        </table>
+        </div>
+
+        <div class="details_right">
+          <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
+          <br>
+          <input type="text" class="short_description" value="Ignores non-work"> 
+          <br>
+          <br>
+          <button class="save_button"> Save </button>
+          <button class="save_exit_button"> Save & Exit </button>
+        </div>
+        
+      </div>
+
+      <div id="transparent_mode_details" style="display: none;">
+        <button type="button" hidden></button>
+        <img class="mode_avatar" src="./src/transparent_mode.png">
+        <input class="mode_big_name" value="Transparent Mode">
+        <br>
+        <div class="details_left">
+        <table class="customization_table">
+          
+          <tr style="background-color: #e5e5e5;">
+            <td style="width: 40px"> Contacts </td>
+            <td class="all_personal" id="transparent_bulk_personal"> Personal channel </td>
+            <td class="all_work" id="transparent_bulk_work"> Work <br> channel </td>
+            <td class="all_gaming" id="transparent_bulk_gaming"> Gaming channel </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="transparent_john">
+              <img class="contact_avatar" src="./src/avatar_friend.png">
+              <br> 
+              <span class="contact_name"> John </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_transparent_1" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_2" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_3" type="checkbox" class="mode_checkbox" checked> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="transparent_boss">
+              <img class="contact_avatar" src="./src/avatar_colleague.png">
+              <br> 
+              <span class="contact_name"> Boss </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_transparent_4" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_5" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_6" type="checkbox" class="mode_checkbox" checked> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="transparent_anton">
+              <img class="contact_avatar" src="./src/avatar_random.png">
+              <br> 
+              <span class="contact_name"> Anton </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_transparent_7" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_8" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_transparent_9" type="checkbox" class="mode_checkbox" checked> </td>
+          </tr>
+
+
+        </table>
+        </div>
+
+        <div class="details_right">
+          <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
+          <br>
+          <input type="text" class="short_description" value="Ignores nothing"> 
+          <br>
+          <br>
+          <button class="save_button"> Save </button>
+          <button class="save_exit_button"> Save & Exit </button>
+        </div>
+        
+      </div>
+
+      <div id="new_mode_details" style="display: none;">
+        <button type="button" hidden></button>
+        <img class="mode_avatar" src="./src/new_mode.png">
+        <input class="mode_big_name" value="New Mode">
+        <br>
+        <div class="details_left">
+        <table class="customization_table">
+          
+          <tr style="background-color: #e5e5e5;">
+            <td style="width: 40px"> Contacts </td>
+            <td class="all_personal" id="new_bulk_personal"> Personal channel </td>
+            <td class="all_work" id="new_bulk_work"> Work <br> channel </td>
+            <td class="all_gaming" id="new_bulk_gaming"> Gaming channel </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="new_john">
+              <img class="contact_avatar" src="./src/avatar_friend.png">
+              <br> 
+              <span class="contact_name"> John </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_new_1" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_2" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_3" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="new_boss">
+              <img class="contact_avatar" src="./src/avatar_colleague.png">
+              <br> 
+              <span class="contact_name"> Boss </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_new_4" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_5" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_6" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="new_anton">
+              <img class="contact_avatar" src="./src/avatar_random.png">
+              <br> 
+              <span class="contact_name"> Anton </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_new_7" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_8" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_new_9" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+
+        </table>
+        </div>
+
+        <div class="details_right">
+          <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
+          <br>
+          <input type="text" class="short_description" value=""> 
+          <br>
+          <br>
+          <button class="save_button"> Save </button>
+          <button class="save_exit_button"> Save & Exit </button>
+        </div>
+        
+      </div>
+
     </div>
 
   </div>
