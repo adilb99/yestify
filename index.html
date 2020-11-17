@@ -18,15 +18,21 @@
   		</div>
   		<div id = "button-chats">Chats</div>
   		<div id = "button-settings">Settings</div>
-  	</div>
-  	<div id = "menubar-mode-selector">Current mode</div>
+    </div>
+  	<div> 
+      <select id="menubar-mode-selector">
+        <option value="social" selected> Social mode </option>
+        <option value="work"> Work mode </option>
+        <option value="transparent"> Transparent </option>
+        <option value="custom1"> Custom1 mode </option>
+      </select>
+    </div>
   	<div id = "menubar-logo">YEStify</div>
   </div>
 
 
   <div id = "main">
     <div id="contacts"> 
-
       <span style="padding-bottom: 20px; margin-left: 40px; font-size: 1.5em"> 
         Your contacts </span>
 
@@ -204,6 +210,50 @@
         </div>
 
     </div>
+  </div>
+
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id="modal_span">&times;</span>
+      <h2> You got a new friend request! </h2>
+    </div>
+    <div class="modal-body">
+      <table style="padding-bottom: 10px;">
+        <tr>
+          <td rowspan="2">
+            <img src="./src/avatar_batman.png" style="width: 70px; height: 70px;">
+          </td>
+          <td style="padding-left: 10px;">
+            <span style="font-size: 1.4em; font-weight: 600;"> Bruce Wayne, 35 </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding-bottom: 20px; padding-left: 13px;">
+            <span style="color: #8b8b8b"> Daejeon, KAIST </span>
+          </td>
+        </tr>
+      </table>
+
+      <span id="accept_button"> Accept </span>
+      <span id="decline_button"> Decline </span>
+
+      <select id="change_modes_select">
+        <option disabled selected hidden> Change modes? </option>
+        <option value="social"> Social </option>
+        <option value="work"> Work </option>
+        <option value="transparent"> Transparent </option>
+        <option value="custom1"> Custom1 </option>
+      </select>
+
+    </div>
+  </div>
+
+
+  <div id="after_popup">
+    You are now in <span style="font-weight: 600;"> Work Mode</span>! 
+    Notifications unrelated to <span style="font-weight: 600;"> Work </span> are disabled 
   </div>
 
 

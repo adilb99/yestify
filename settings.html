@@ -4,13 +4,151 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Notifications | YEStify</title>
-
+  <title>Settings | YEStify</title>
+  <script src="https://kit.fontawesome.com/37397bbd57.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles/settings.css" >
 
 </head>
 
 <body>
+  <div id = "menubar">
+  	<div id = "buttons">
+  		<div id = "bell">
+  			<img id = "bell-img" src="src/bell.png">
+  		</div>
+  		<div id = "button-chats">Chats</div>
+  		<div id = "button-settings">Settings</div>
+    </div>
+  	<div> 
+      <select id="menubar-mode-selector">
+        <option value="social" selected> Social mode </option>
+        <option value="work"> Work mode </option>
+        <option value="transparent"> Transparent </option>
+        <option value="custom1"> Custom1 mode </option>
+      </select>
+    </div>
+  	<div id = "menubar-logo">YEStify</div>
+  </div>
+
+
+
+  <div id = "main">
+    <div id="modes"> 
+      <span style="padding-bottom: 20px; margin-left: 40px; font-size: 1.5em"> 
+        Your modes </span>
+
+        <table id="modes_table">
+          <tr id="social_mode">
+            <td><img class="mode_img" src="./src/social_mode.png"></td>
+            <td> 
+              <span class="mode_name"> Social mode </span>
+              <span class="mode_preview"> Ignores work </span>
+
+            </td>
+            <td>
+              <i class="fas fa-copy"></i>
+            </td>
+          
+          </tr>
+
+          <tr id="work_mode">
+            <td><img class="mode_img" src="./src/work_mode.png"></td>
+            <td> 
+              <span class="mode_name"> Work mode  </span>
+              <span class="mode_preview"> Ignores non-work </span>
+            </td>
+            <td>
+              <i class="fas fa-copy"></i>
+            </td>
+
+          </tr>
+
+          <tr id="transparent_mode">
+            <td><img class="mode_img" src="./src/transparent_mode.png"></td>
+            <td> 
+              <span class="mode_name"> Transparent </span> 
+              <span class="mode_preview"> Ignores nothing </span>
+
+            </td>
+            <td>
+              <i class="fas fa-copy"></i>
+            </td>
+          </tr>
+
+
+        </table>
+
+        <i class="fas fa-plus" id="add_mode_icon"></i>
+
+    </div>
+
+    <div id="details">
+      <div id="social_mode">
+
+        <img class="mode_avatar" src="./src/social_mode.png">
+        <span class="mode_big_name"> Social Mode </span>
+        <br>
+        <div class="details_left">
+        <table class="customization_table">
+          
+          <tr style="background-color: #e5e5e5;">
+            <td style="width: 40px"> Contacts </td>
+            <td class="all_personal"> Personal channel </td>
+            <td class="all_work"> Work <br> channel </td>
+            <td class="all_gaming"> Gaming channel </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell">
+              <img class="contact_avatar" src="./src/avatar_friend.png">
+              <br> 
+              <span class="contact_name"> John </span>
+            </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell">
+              <img class="contact_avatar" src="./src/avatar_colleague.png">
+              <br> 
+              <span class="contact_name"> Boss </span>
+            </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell">
+              <img class="contact_avatar" src="./src/avatar_random.png">
+              <br> 
+              <span class="contact_name"> Anton </span>
+            </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+
+        </table>
+        </div>
+
+        <div class="details_right">
+          <span> Short Description </span>
+          <br>
+          <input type="text" id="social_description"> 
+          <br>
+          <button> Save </button>
+          <button> Save & Exit </button>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+
   <script src="scripts/settings.js"></script>
 </body>
 </html>

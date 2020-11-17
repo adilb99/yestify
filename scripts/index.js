@@ -1,7 +1,7 @@
 console.log("INDEX"); // WTF??
 
 const chat_placeholder = document.getElementById('chat_placeholder');
-
+const menubar_mode_selector = document.getElementById('menubar-mode-selector');
 // Constants for John Johnsky contact
 const john_contact = document.getElementById('john_contact');
 const john_chat = document.getElementById('john_chat');
@@ -187,4 +187,61 @@ anton_contact.addEventListener('click', function(){
 
 
     anton_chat.style.display = "initial";
+});
+
+
+
+// Pop up notification handler
+
+const modal = document.getElementsByClassName("modal-content")[0];
+const modal_span = document.getElementById("modal_span");
+const accept_button = document.getElementById('accept_button');
+const decline_button = document.getElementById('decline_button');
+
+setTimeout(function(){
+    modal.style.display = "block";
+}, 10000);
+  
+
+modal_span.onclick = function() {
+  modal.style.display = "none";
+  setTimeout(function(){
+    modal.style.display = "block";
+}, 10000);
+}
+
+accept_button.addEventListener('click', function(){
+    modal.style.display = "none";
+    setTimeout(function(){
+        modal.style.display = "block";
+    }, 10000);
+});
+
+decline_button.addEventListener('click', function(){
+    modal.style.display = "none";
+    setTimeout(function(){
+        modal.style.display = "block";
+    }, 10000);
+});
+
+const change_modes_select = document.getElementById('change_modes_select');
+const after_popup = document.getElementById('after_popup');
+
+
+
+// Handling pop-up after mode changed on the fly
+change_modes_select.addEventListener('change', function(){
+    if(change_modes_select.value == "work"){
+        modal.style.display = "none";
+        after_popup.style.display = "block";
+
+        menubar_mode_selector.value = "work";
+        document.getElementById('menubar').style.backgroundColor = "#e5e5e5";
+
+        setTimeout(function(){
+            after_popup.className = 'hide';
+            setTimeout(function(){after_popup.style.display = "none";}, 400);
+        }, 3000)
+    }
+
 });

@@ -1,3 +1,223 @@
 *{
 	font-family: sans-serif;
 }
+
+#menubar{
+	position: absolute;
+	width: 99%;
+	min-height: 5%;
+	background-color: #cff4ff;
+	display: flex;
+	flex-direction: horizontal;
+	font-size: 32px;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+#buttons{
+	flex-grow: 8;
+	display: flex;
+	flex-direction: horizontal;
+	justify-content: flex-start;
+}
+
+#bell{
+	height: 100%;
+	display: flex;
+}
+
+#bell-img{
+	height: 50px;
+	width: 50px;
+	object-fit: scale-down;
+}
+
+#button-chats{
+	padding-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+#button-settings{
+	padding: 5px 5px 0px 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #f2fcff;
+	cursor: pointer;
+}
+
+#menubar-mode-selector{
+	margin-top: 10px;
+	margin-right: 10px;
+	padding-left: 30px;
+	background-color: #f3f3f3;
+	border: none;
+	appearance: none;
+	text-align: center;
+	font-size: 0.8em;
+	overflow: hidden;
+	color: #000000;
+	cursor: pointer;
+}
+
+#menubar-logo{
+	text-align: center;
+	padding-top: 5px;
+	flex-grow: 1;
+}
+
+
+#modes_table {
+	margin-top: 10px;
+	margin-left: 12px;
+	width: 215px;
+	border-collapse: collapse;
+}
+
+#modes_table td {
+	padding-left: 10px;
+	height: 75px;
+}
+
+#modes_table tr {
+	border-bottom: 1px solid #e5e5e5;
+	cursor: pointer;
+}
+
+.fa-copy:hover {
+	color: #b8b8b8;
+	cursor: pointer;
+}
+
+#modes {
+	padding-top: 10px;
+	border: 1px solid #e5e5e5;
+	width: 240px;
+	height: 80vh;
+	box-shadow: 3px 4px 3px #cacaca;
+	float: left;
+}
+
+
+#details {
+	padding-top: 10px;
+	border: 1px solid #e5e5e5;
+	float: right;
+	margin-left: 270px;
+	width: 75%;
+	height: 80vh;
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#main {
+	padding-top: 80px;
+	position: relative;
+}
+
+.mode_img {
+	width: 50px;
+	height: 50px;
+}
+
+.mode_preview {
+	margin-top: 10px;
+	color: #777777;
+}
+
+.mode_name {
+	font-weight: 700;
+	padding-bottom: 10px;
+}
+
+#add_mode_icon {
+	margin-top: 20px;
+	margin-left: 85px;
+	color: #888888;
+	background-color: #f8f8f8;
+	width: 80px;
+	text-align: center;
+}
+
+#add_mode_icon:hover {
+	cursor: pointer;
+	color: #333333;
+	background-color: #e5e5e5;
+}
+
+.mode_big_name {
+	font-size: 1.5em;
+	font-weight: 600;
+	padding-right: 20px;
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.mode_avatar {
+	width: 65px;
+	height: 65px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#add_mode_icon {
+	margin-top: 20px;
+	margin-left: 85px;
+	color: #888888;
+	background-color: #f8f8f8;
+	width: 80px;
+	text-align: center;
+}
+
+#add_mode_icon:hover {
+	cursor: pointer;
+	color: #333333;
+	background-color: #e5e5e5;
+}
+
+.customization_table {
+	border: 1px solid black;
+	margin-top: 40px;
+	font-size: 1.2em;
+}
+
+.customization_table td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.contact_avatar {
+	height: 40px;
+	width: 40px;
+}
+
+.contact_cell {
+	text-align: center;
+}
+
+.mode_checkbox {
+	height: 50px;
+	width: 50px;
+}
+
+.checkbox_cell {
+	width: 80px;
+}
+
+.contact_cell {
+	height: 80px
+}
+
+.details_left {
+	display: inline-block;
+}
+
+.details_right {
+	padding: 50px 0px 0px 50px;
+	display: inline-block;
+	vertical-align: top;
+}
