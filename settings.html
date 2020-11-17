@@ -46,10 +46,25 @@
 
             </td>
             <td>
-              <i class="fas fa-copy"></i>
+              <i class="fas fa-copy" id="copy_button"></i>
             </td>
             <td style="padding-right: 5px;">
               <i class="fas fa-trash-alt"></i>
+            </td>
+          </tr>
+
+          <tr id="social_mode_copy" style="display: none;">
+            <td><img class="mode_img" src="./src/social_mode.png"></td>
+            <td> 
+              <span class="mode_name"> Social mode (copy) </span>
+              <span class="mode_preview"> Ignores work </span>
+
+            </td>
+            <td>
+              <i class="fas fa-copy"></i>
+            </td>
+            <td style="padding-right: 5px;">
+              <i class="fas fa-trash-alt" id="delete_button_social_copy"></i>
             </td>
           </tr>
 
@@ -86,15 +101,15 @@
           <tr id="new_mode" style="display: none;">
             <td><img class="mode_img" src="./src/new_mode.png"></td>
             <td> 
-              <span class="mode_name"> New Mode </span> 
-              <span class="mode_preview">  </span>
+              <span class="mode_name" id="updated_name"> New Mode </span> 
+              <span class="mode_preview" id="updated_desc">  </span>
 
             </td>
             <td>
               <i class="fas fa-copy"></i>
             </td>
             <td style="padding-right: 5px;">
-              <i class="fas fa-trash-alt"></i>
+              <i class="fas fa-trash-alt" id="delete_button_new"></i>
             </td>
           </tr>
 
@@ -152,6 +167,70 @@
             <td class="checkbox_cell"> <input id="check_social_7" type="checkbox" class="mode_checkbox" checked> </td>
             <td class="checkbox_cell"> <input id="check_social_8" type="checkbox" class="mode_checkbox"> </td>
             <td class="checkbox_cell"> <input id="check_social_9" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+
+        </table>
+        </div>
+
+        <div class="details_right">
+          <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
+          <br>
+          <input type="text" class="short_description" value="Ignores work"> 
+          <br>
+          <br>
+          <button class="save_button"> Save </button>
+          <button class="save_exit_button"> Save & Exit </button>
+        </div>
+        
+      </div>
+
+      <div id="social_mode_copy_details" style="display: none;">
+        <button type="button" hidden></button>
+        <img class="mode_avatar" src="./src/social_mode.png">
+        <input class="mode_big_name" value="Social Mode (copy)">
+        <br>
+        <div class="details_left">
+        <table class="customization_table">
+          
+          <tr style="background-color: #e5e5e5;">
+            <td style="width: 40px"> Contacts </td>
+            <td class="all_personal" id="social_copy_bulk_personal"> Personal channel </td>
+            <td class="all_work" id="social_copy_bulk_work"> Work <br> channel </td>
+            <td class="all_gaming" id="social_copy_bulk_gaming"> Gaming channel </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="social_copy_john">
+              <img class="contact_avatar" src="./src/avatar_friend.png">
+              <br> 
+              <span class="contact_name"> John </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_1" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_2" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_3" type="checkbox" class="mode_checkbox" checked> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="social_copy_boss">
+              <img class="contact_avatar" src="./src/avatar_colleague.png">
+              <br> 
+              <span class="contact_name"> Boss </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_4" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_5" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_6" type="checkbox" class="mode_checkbox"> </td>
+          </tr>
+
+          <tr>
+            <td class="contact_cell" id="social_copy_anton">
+              <img class="contact_avatar" src="./src/avatar_random.png">
+              <br> 
+              <span class="contact_name"> Anton </span>
+            </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_7" type="checkbox" class="mode_checkbox" checked> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_8" type="checkbox" class="mode_checkbox"> </td>
+            <td class="checkbox_cell"> <input id="check_social_copy_9" type="checkbox" class="mode_checkbox"> </td>
           </tr>
 
 
@@ -301,7 +380,7 @@
       <div id="new_mode_details" style="display: none;">
         <button type="button" hidden></button>
         <img class="mode_avatar" src="./src/new_mode.png">
-        <input class="mode_big_name" value="New Mode">
+        <input class="mode_big_name" value="New Mode" id="updating_name">
         <br>
         <div class="details_left">
         <table class="customization_table">
@@ -353,7 +432,7 @@
         <div class="details_right">
           <span style="font-size: 1.5em; font-weight: 600;"> Short Description </span>
           <br>
-          <input type="text" class="short_description" value=""> 
+          <input type="text" class="short_description" value="" id="updating_desc"> 
           <br>
           <br>
           <button class="save_button"> Save </button>

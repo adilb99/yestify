@@ -12,7 +12,10 @@ const transparent_mode_details = document.getElementById('transparent_mode_detai
 const new_mode_selector = document.getElementById('new_mode');
 const new_mode_details = document.getElementById('new_mode_details');
 
+const social_mode_copy_selector = document.getElementById('social_mode_copy');
+const social_mode_copy_details = document.getElementById('social_mode_copy_details');
 
+let currently_selected;
 
 social_mode_selector.addEventListener('click', function(){
     work_mode_details.style.display = "none";
@@ -24,11 +27,33 @@ social_mode_selector.addEventListener('click', function(){
     new_mode_details.style.display = "none";
     new_mode_selector.style.backgroundColor = "white";
 
+    social_mode_copy_details.style.display = "none";
+    social_mode_copy_selector.style.backgroundColor = "white"
+
     social_mode_details.style.display = "initial";
     social_mode_selector.style.backgroundColor = "#e5e5e5";
 
+    currently_selected = "social";
 });
 
+social_mode_copy_selector.addEventListener('click', function(){
+    social_mode_copy_details.style.display = "initial";
+    social_mode_copy_selector.style.backgroundColor = "#e5e5e5"
+
+    work_mode_details.style.display = "none";
+    work_mode_selector.style.backgroundColor = "white";
+
+    transparent_mode_details.style.display = "none";
+    transparent_mode_selector.style.backgroundColor = "white";
+
+    new_mode_details.style.display = "none";
+    new_mode_selector.style.backgroundColor = "white";
+
+    social_mode_details.style.display = "none";
+    social_mode_selector.style.backgroundColor = "white";
+
+    // currently_selected = "social_copy";
+});
 
 work_mode_selector.addEventListener('click', function(){
     transparent_mode_details.style.display = "none";
@@ -40,9 +65,13 @@ work_mode_selector.addEventListener('click', function(){
     new_mode_details.style.display = "none";
     new_mode_selector.style.backgroundColor = "white";
 
+    social_mode_copy_details.style.display = "none";
+    social_mode_copy_selector.style.backgroundColor = "white"
+
     work_mode_details.style.display = "initial";
     work_mode_selector.style.backgroundColor = "#e5e5e5";
 
+    currently_selected = "work";
 });
 
 transparent_mode_selector.addEventListener('click', function(){
@@ -55,9 +84,13 @@ transparent_mode_selector.addEventListener('click', function(){
     new_mode_details.style.display = "none";
     new_mode_selector.style.backgroundColor = "white";
 
+    social_mode_copy_details.style.display = "none";
+    social_mode_copy_selector.style.backgroundColor = "white"
+
     transparent_mode_details.style.display = "initial";
     transparent_mode_selector.style.backgroundColor = "#e5e5e5";
 
+    currently_selected = "transparent";
 });
 
 new_mode_selector.addEventListener('click', function(){
@@ -70,8 +103,13 @@ new_mode_selector.addEventListener('click', function(){
     transparent_mode_details.style.display = "none";
     transparent_mode_selector.style.backgroundColor = "white";
 
+    social_mode_copy_details.style.display = "none";
+    social_mode_copy_selector.style.backgroundColor = "white"
+
     new_mode_details.style.display = "initial";
     new_mode_selector.style.backgroundColor = "#e5e5e5";
+
+    currently_selected = "new";
 });
 
 const social_bulk_personal = document.getElementById('social_bulk_personal');
@@ -490,5 +528,60 @@ new_anton.addEventListener('click', function(){
 const add_mode_button = document.getElementById('add_mode_icon');
 
 add_mode_button.addEventListener('click', function(){
+    new_mode_selector.style.display = "";
+});
 
+const copy_button = document.getElementById('copy_button');
+
+copy_button.addEventListener('click', function(){
+    social_mode_copy_selector.style.display = "";
+});
+
+const delete_button_social_copy = document.getElementById('delete_button_social_copy');
+const delete_button_new = document.getElementById('delete_button_new');
+
+delete_button_social_copy.addEventListener('click', function(){
+    
+    setTimeout(function(){
+
+        console.log(currently_selected);
+
+        if(currently_selected == "social"){
+            social_mode_details.style.display = "initial";
+            social_mode_selector.style.backgroundColor = "#e5e5e5";
+        } else if(currently_selected == "social_copy") {
+            social_mode_details.style.display = "initial";
+            social_mode_selector.style.backgroundColor = "#e5e5e5";
+        } else if(currently_selected == "work") {
+            work_mode_details.style.display = "initial";
+            work_mode_selector.style.backgroundColor = "#e5e5e5";
+        } else if(currently_selected == "transparent"){
+            transparent_mode_details.style.display = "initial";
+            transparent_mode_selector.style.backgroundColor = "#e5e5e5";
+        } else if(currently_selected == "new"){
+            new_mode_details.style.display = "initial";
+            new_mode_selector.style.backgroundColor = "#e5e5e5";
+        }
+
+
+        social_mode_copy_details.style.display = "none";
+        social_mode_copy_selector.style.display = "none";
+        
+    }, 100)
+    
+});
+
+
+const updating_name = document.getElementById('updating_name');
+const updated_name = document.getElementById('updated_name');
+
+updating_name.addEventListener('keyup', function(){
+    updated_name.innerHTML = updating_name.value;
+});
+
+const updating_desc = document.getElementById('updating_desc');
+const updated_desc = document.getElementById('updated_desc');
+
+updating_desc.addEventListener('keyup', function(){
+    updated_desc.innerHTML = updating_desc.value;
 });
