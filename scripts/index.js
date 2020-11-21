@@ -1,5 +1,3 @@
-console.log("INDEX"); // WTF??
-
 const chat_placeholder = document.getElementById('chat_placeholder');
 const menubar_mode_selector = document.getElementById('menubar-mode-selector');
 // Constants for John Johnsky contact
@@ -243,7 +241,6 @@ change_modes_select.addEventListener('change', function(){
             setTimeout(function(){after_popup.style.display = "none";}, 400);
         }, 3000)
     }
-
 });
 
 
@@ -259,4 +256,7 @@ menubar_mode_selector.addEventListener('change', function(){
             setTimeout(function(){after_popup.style.display = "none";}, 400);
         }, 3000)
     }
+    else{
+    	document.getElementById('menubar').style.backgroundColor = "#cff4ff";
+  	}
 });

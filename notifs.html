@@ -11,8 +11,103 @@
 </head>
 
 <body>
-  <script src="scripts/notifs.js"></script>
-  	
+  <div id="menubar">
+    <div id="buttons">
+      <div id="bell">
+        <img id="bell-img" src="src/bell.png">
+      </div>
+      <div id="button-chats" onclick="location.href='./index.html'">Chats</div>
+      <div id="button-settings" onclick="location.href='./settings.html'">Settings</div>
+    </div>
+    <div> 
+      <select id="menubar-mode-selector">
+        <option value="social" selected> Social mode </option>
+        <option value="work"> Work mode </option>
+        <option value="transparent"> Transparent </option>
+      </select>
+    </div>
+    <div id="menubar-logo">YEStify</div>
   </div>
+
+  <div id="main">
+    <div id="notifs-window">
+      <div class="notifs_selector_div">
+        <div class="notifs_selector" id="notifs_all_button"> All </div>
+        <div class="notifs_selector" id="notifs_personal_button"> Personal </div>
+        <div class="notifs_selector selected" id="notifs_work_button"> Work </div>
+        <div class="notifs_selector" id="notifs_gaming_button"> Gaming </div>
+      </div>
+      <div class="notifs-list" id="notifs-work"><ul style="list-style: none">
+        <li class="notif-item">
+          <div style="float:left"><img class="avatar_img" src="./src/avatar_colleague.png"/></div>
+          <div class="notif-content">
+            <div>
+              <span class="contact_name">Boss Bossow</span>
+              <span class="notif-mode-work">Work</span>
+              <span class="notif-time">1 m ago</span>
+            </div>
+            <div class="notif-text">How's the report going?</div></div>
+        </li>
+      </ul></div>
+      <div class="notifs-list" id="notifs-all"><ul style="list-style: none">
+          <li class="notif-item">
+            <div style="float:left"><img class="avatar_img" src="./src/avatar_colleague.png"/></div>
+            <div class="notif-content">
+              <div>
+                <span class="contact_name">Boss Bossow</span>
+                <span class="notif-mode-work">Work</span>
+                <span class="notif-time">1 m ago</span>
+              </div>
+              <div class="notif-text">How's the report going?</div></div>
+          </li>
+          <li class="notif-item">
+            <div style="float:left"><img class="avatar_img" src="./src/avatar_friend.png"/></div>
+            <div class="notif-content">
+              <div>
+                <span class="contact_name">John Johnsky</span>
+                <span class="notif-mode-personal">Personal</span>
+                <span class="notif-time">8:08 AM</span>
+              </div>
+              <div class="notif-text">Hey, how's it going?</div></div>
+          </li>
+          <li class="notif-item">
+            <div style="float:left"><img class="avatar_img" src="./src/avatar_colleague.png"/></div>
+            <div class="notif-content">
+              <div>
+                <span class="contact_name">Boss Bossow</span>
+                <span class="notif-mode-personal">Personal</span>
+                <span class="notif-time">9:17 PM</span>
+              </div>
+              <div class="notif-text">How's the report going?</div></div>
+          </li>
+        </ul></div>
+      <div class="notifs-list" id="notifs-personal"><ul style="list-style: none">
+          <li class="notif-item">
+            <div style="float:left"><img class="avatar_img" src="./src/avatar_friend.png"/></div>
+            <div class="notif-content">
+              <div>
+                <span class="contact_name">John Johnsky</span>
+                <span class="notif-mode-personal">Personal</span>
+                <span class="notif-time">8:08 AM</span>
+              </div>
+              <div class="notif-text">Hey, how's it going?</div></div>
+          </li>
+          <li class="notif-item">
+            <div style="float:left"><img class="avatar_img" src="./src/avatar_colleague.png"/></div>
+            <div class="notif-content">
+              <div>
+                <span class="contact_name">Boss Bossow</span>
+                <span class="notif-mode-personal">Personal</span>
+                <span class="notif-time">9:17 PM</span>
+              </div>
+              <div class="notif-text">How's the report going?</div></div>
+          </li>
+        </ul></div>
+      <div class="notifs-list notifs-empty" id="notifs-gaming">
+        <span style="margin-left:20px">nothing to show here</span>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/notifs.js"></script>
 </body>
 </html>
