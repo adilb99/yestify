@@ -218,6 +218,7 @@
 
 .msg-box {
 	width: fit-content;
+	width: -moz-fit-content;
 	margin: 30px auto;
 	border-radius: 15px;
 	background: #e0f8ff;
