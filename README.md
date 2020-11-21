@@ -3,11 +3,11 @@ A messaging app with convenient and customizable notifications to keep you conce
 
 ## overview
 The repository source directory contains three main `.html` files.
-`index.html` - main chats screen
-`settings.html` - a simple yet powerful notifications settings page
-`notifs.html` - a separate page to view the notifications <br>
+`index.html` - main chats screen <br>
+`settings.html` - a simple yet powerful notifications settings page <br>
+`notifs.html` - a separate page to view the notifications. <br>
 The `styles` directory contains the `.css` stylesheets and the `scripts` directory contains vanilla JavaScript scripts. There is one stylesheet and one script file per page, and the names correspond to the related `.html` file. <br>
-The `src` directory contains the icons and the other source files for the prototype <br>
+The `src` directory contains the icons and the other source files for the prototype. <br>
 The backend of this app will be hosted on the [Firebase](https://firebase.google.com/).
 
 ## Note
