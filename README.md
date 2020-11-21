@@ -2,7 +2,7 @@
 A messaging app with convenient and customizable notifications to keep you concentrated on work when needed and totally social at all other times.
 
 ## overview
-The repository source directory contains three main `.html` files.
+The repository source directory contains three main `.html` files.<br/>
 `index.html` - main chats screen <br>
 `settings.html` - a simple yet powerful notifications settings page <br>
 `notifs.html` - a separate page to view the notifications. <br>
