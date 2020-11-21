@@ -12,6 +12,7 @@
 	font-size: 32px;
 	justify-content: space-between;
 	z-index: 1;
+  border: 1px solid #9999dd;
 }
 
 #buttons{

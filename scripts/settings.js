@@ -1,5 +1,3 @@
-console.log("SETTINGS");
-
 const social_mode_selector = document.getElementById('social_mode');
 const social_mode_details = document.getElementById('social_mode_details');
 
