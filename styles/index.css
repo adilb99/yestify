@@ -465,3 +465,108 @@ select:invalid {
 #change_modes_select:hover {
 	color: #575757;
 }
+
+#overlay-bg{
+	display: none;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 69%;
+	z-index: 3;
+}
+
+#overlay-window{
+	position: fixed;
+	left: 30%;
+	top: 5%;
+	z-index: 3;
+	width: 40%;
+	height: 90%;
+	background-color: white;
+	color:black;
+	display: none;
+}
+
+#overlay-header{
+	height: 10%;
+	width: 100%;
+	border-bottom: solid #9999dd;
+	background-color: #cff4ff;
+	display: inline-block;
+}
+
+.header_text{
+	float: left;
+	padding: 10px 10px 10px 50px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+#close_cross{
+	margin: 0px 5px 10px 0px; 
+	float: right;
+	color: #ababab;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+#close_cross:hover,
+#close_cross:focus {
+	color: #555;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+.contacts_new_item{
+	padding-top: 10px;
+ 	border-bottom: 1px solid #cdcfcb;
+ 	width: 90%;
+ 	text-align: left;
+ 	height: 70px;
+}
+.contacts_new_item:hover{
+	background-color: #e5e5e5;
+	cursor: pointer;
+}
+
+.contact_new{
+	padding-top: 10px;
+	padding-left: 60px;
+}
+
+#notify_warning{
+	background-color: #afafff;
+	height: fit-content;
+	height: -moz-fit-content;
+	width: 90%;
+	margin: 10px 5% 10px 5%;
+	padding: 10px;
+}
+
+#yes_notify_button{
+	margin-left: 35%;
+	margin-right: 10px;
+	padding: 5px;
+	background-color: #acacac;
+}
+
+#yes_notify_button:hover,
+#yes_notify_button:focus{
+	cursor: pointer;
+	background-color: red;
+}
+
+#dismiss_warning_button{
+	padding: 5px;
+	background-color: #acacac;
+}
+
+#dismiss_warning_button:hover,
+#dismiss_warning_buttonn:focus{
+	cursor: pointer;
+	background-color: red;
+}

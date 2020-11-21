@@ -18,46 +18,46 @@ const notif_lists = [notifs_work, notifs_all, notifs_personal, notifs_gaming];
 notifs_all_button.addEventListener('click', ()=>{
   notif_types.forEach((item, index) => {
     item.classList.remove("selected");
-  })
+  });
   notif_lists.forEach((item, index) => {
     item.style.display = "none";
-  })
+  });
   notifs_all_button.classList.add("selected");
   notifs_all.style.display="block";
-})
+});
 
 notifs_personal_button.addEventListener('click', ()=>{
   notif_types.forEach((item, index) => {
     item.classList.remove("selected");
-  })
+  });
   notif_lists.forEach((item, index) => {
     item.style.display = "none";
-  })
+  });
   notifs_personal_button.classList.add("selected");
   notifs_personal.style.display="block";
-})
+});
 
 notifs_work_button.addEventListener('click', ()=>{
   notif_types.forEach((item, index) => {
     item.classList.remove("selected");
-  })
+  });
   notif_lists.forEach((item, index) => {
     item.style.display = "none";
-  })
+  });
   notifs_work_button.classList.add("selected");
   notifs_work.style.display="block";
-})
+});
 
 notifs_gaming_button.addEventListener('click', ()=>{
   notif_types.forEach((item, index) => {
     item.classList.remove("selected");
-  })
+  });
   notif_lists.forEach((item, index) => {
     item.style.display = "none";
-  })
+  });
   notifs_gaming_button.classList.add("selected");
   notifs_gaming.style.display="block";
-})
+});
 
 menubar_mode_selector.addEventListener('change', ()=>{
   if(menubar_mode_selector.value == "work"){

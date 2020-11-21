@@ -190,6 +190,7 @@ html, body{
 }
 
 .notifs-counter{
+  display: none;
   margin-left: 5px;
   float: right;
   width: 18px;

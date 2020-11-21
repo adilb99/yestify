@@ -11,6 +11,42 @@
 </head>
 
 <body>
+  <div id="contacts-overlay">
+    <div id="overlay-bg"></div>
+    <div id="overlay-window">
+      <div id="overlay-header">
+        <div class = "header_text">Please select a contact to start a new chat</div>
+        <div id = "close_cross">&times;</div>
+      </div>
+      <div id="overlay-main"><ul style="list-style: none">
+        <li class="contacts_new_item">
+          <div style="float:left"><img class="avatar_img" src="./src/avatar_pikachu.png"/></div>
+          <div class="contact_new">
+            <span class="contact_name">Pika Chu</span>
+          </div>
+        </li>
+        <li class="contacts_new_item" id="new_chat_python">
+          <div style="float:left"><img class="avatar_img" src="./src/avatar_python.png"/></div>
+          <div class="contact_new">
+            <span class="contact_name">Python Third</span>
+          </div>
+        </li>
+        <li class="contacts_new_item restricted">
+          <div style="float:left"><img class="avatar_img" src="./src/avatar_corona.png"/></div>
+          <div class="contact_new">
+            <span class="contact_name">Suriv Anoroc</span>
+          </div>
+        </li>
+        <li class="contacts_new_item">
+          <div style="float:left"><img class="avatar_img" src="./src/avatar_penguin.png"/></div>
+          <div class="contact_new">
+            <span class="contact_name">Tux Linus</span>
+          </div>
+        </li>
+      </ul></div>
+    </div>
+  </div>
+  
   <div id = "menubar">
   	<div id = "buttons">
   		<div id = "bell" onclick="location.href='./notifs.html'">
@@ -60,6 +96,15 @@
             <td> 
               <span class="contact_name"> Anton Chigurh </span> 
               <span class="message_preview"> Call it </span>
+
+            </td>
+          </tr>
+
+          <tr id="python_contact" style="display: none;">
+            <td><img class="avatar_img" src="./src/avatar_python.png"></td>
+            <td> 
+              <span class="contact_name"> Python Third </span> <br/>
+              <span class="message_preview" style="font-style: italic" id="python_message_preview">No messages yet</span>
 
             </td>
           </tr>
@@ -208,6 +253,49 @@
           </div>
         </div>
 
+        <div id="python_chat" style="display: none;">
+
+          <img class="chat_avatar" src="./src/avatar_python.png">
+          <span class="chat_name"> Python Third </span>
+          <span class="chat_online_status"> Online </span>
+
+          <div class="channel_selector_div">
+            <span class="channel_selector selected" id="python_personal_button"> Personal </span>
+            <span class="channel_selector" id="python_work_button"> Work </span>
+            <span class="channel_selector" id="python_gaming_button"> Gaming </span>
+          </div>
+          
+          <div class="channel_inside" id="python_personal_channel">
+            <span class="chat_placeholder_class" id="python_personal_empty"> No chat here yet... </span>
+            <div class="msg-box right" id="python_sent_message" style="display: none;"></div>
+            <span class="time_marker" id="python_sent_message_timestamp" style="float: right; display: none;"> 4:20 PM </span>
+            <div id="notify_warning" style="display: none;">
+              <div>
+                <span style="font-weight: 600;">Python Third</span> is now in the <span style="font-weight: 600;">Work mode</span> and will not receive your notification. You can still notify about your message, if it is urgent.<br/>
+                You can do that once a day for any person.
+              </div>
+              <div id="yes_notify_button" style="float: left"> It's urgent, notify! </div>
+              <div id="dismiss_warning_button" style="float: left"> Got it. </div>
+            </div>
+          </div>
+          
+          <div class="channel_inside" id="python_work_channel" style="display: none;">
+            <span class="chat_placeholder_class"> No chat here yet... </span>
+          </div>
+
+          <div class="channel_inside" id="python_gaming_channel" style="display: none;">
+            <span class="chat_placeholder_class"> No chat here yet... </span>
+          </div>
+
+          <div class="chat_message_field_div"> 
+            <img class="clip-icon" src="./src/clip_icon.png">
+            <input class="message_input" id="python_message_input" type="text" placeholder="Your message here...">
+            <i class="far fa-smile"></i>
+            <i class="fas fa-paper-plane" id="python_send_button"></i>
+          </div>
+
+        </div>
+
     </div>
   </div>
 
@@ -250,7 +338,7 @@
 
 
   <div id="after_popup">
-    You are now in <span style="font-weight: 600;"> Work Mode</span>! 
+    You are now in <span style="font-weight: 600;"> Work Mode </span>! 
     Notifications unrelated to <span style="font-weight: 600;"> Work </span> are disabled 
   </div>
 
