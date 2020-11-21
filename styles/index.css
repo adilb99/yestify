@@ -25,6 +25,7 @@
 #bell{
 	height: 100%;
 	display: flex;
+	cursor: pointer;
 }
 
 #bell-img{

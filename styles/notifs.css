@@ -30,6 +30,7 @@ html, body{
 	height: 100%;
 	display: flex;
   background-color: #f2fcff;
+  cursor: pointer;
 }
 
 #bell-img{

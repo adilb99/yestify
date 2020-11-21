@@ -25,6 +25,7 @@
 #bell{
 	height: 100%;
 	display: flex;
+	cursor: pointer;
 }
 
 #bell-img{
@@ -328,3 +329,8 @@
 	from {opacity: 0}
 	to {opacity: 1}
   }
+
+.table_explanation {
+	color: #979797;
+	font-size: 0.8em;
+}
