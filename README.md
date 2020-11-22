@@ -7,13 +7,17 @@ The repository source directory contains three main `.html` files.<br/>
 `settings.html` - a simple yet powerful notifications settings page <br>
 `notifs.html` - a separate page to view the notifications. <br>
 The `styles` directory contains the `.css` stylesheets and the `scripts` directory contains vanilla JavaScript scripts. There is one stylesheet and one script file per page, and the names correspond to the related `.html` file. <br>
-The `src` directory contains the icons and the other source files for the prototype. <br>
-The backend of this app will be hosted on the [Firebase](https://firebase.google.com/).
+The `src` directory contains the icons and the other source files for the prototype.
 
 ## Note
-This is just a prototype, so now account creation is available, many of the features are hard-coded, and the messaging functionality is not implemented.
+This is just a prototype, so now account creation is available, many of the features are hard-coded, and the messaging functionality is not implemented. Please forgive us
 
 ## Try yourself
+### quick launch
+1. Click this [link](https://adilbo.z12.web.core.windows.net/)
+2. ????
+3. PROFIT!!!
+
 ### git clone
 1. Open the command line (shell, command prompt, PowerShell, etc.)
 2. Run the following command
